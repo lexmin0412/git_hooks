@@ -8,12 +8,18 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged"
+      "pre-commit": "pretty-quick --staged",
+      "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
     }
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cathe-zhang/git_hooks.git"
+  },
+  "lint-staged": {
+    "**/*.js": "eslint --ext .js",
+    "**/*.ts": "eslint --ext .tsx",
+    "**/*.tsx": "eslint --ext .ts"
   },
   "keywords": [],
   "author": "",
@@ -23,7 +29,10 @@
   },
   "homepage": "https://github.com/cathe-zhang/git_hooks#readme",
   "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
     "husky": "^4.2.5",
+    "lint-staged": "^10.1.7",
     "prettier": "^2.0.5",
     "pretty-quick": "^2.0.1"
   }
