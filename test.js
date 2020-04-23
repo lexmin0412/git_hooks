@@ -1,1 +1,1 @@
-console.log(123, 'sdfsdf', ssdffd)
+console.log(123, "sdfsdf", ssdffd, sdfsdf, omon);
